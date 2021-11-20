@@ -19,14 +19,14 @@ public class HotelReservationSystemTest {
 
     }
     @Test
-    public void givenHotelDetails_shouldReturnCheapestHotel(){
+    public void givenHotel_shouldReturnCheapHotel(){
 
         HotelReservationSystemMain hotelReservation = new HotelReservationSystemMain();
-        hotelReservation.addHotel("Lakewood", 3, 110,20);
-        hotelReservation.addHotel("Bridgewood", 2, 140,120);
-        LocalDate startDate = LocalDate.of(2021, Month.NOVEMBER, 10);
-        LocalDate endDate = LocalDate.of(2021, Month.NOVEMBER, 11);
-        Hotel hotel = hotelReservation.getCheapestHotel(startDate, endDate);
-        Assert.assertEquals("Lakewood", hotel.getHotelName());
+        hotelReservation.addHotel("Lakewood", 3, 110, 90);
+        hotelReservation.addHotel("Bridgewood", 3, 160, 50);
+        LocalDate startDate = LocalDate.of(2021, Month.SEPTEMBER, 10);
+        LocalDate endDate = LocalDate.of(2021, Month.SEPTEMBER, 12);
+        String hotelName = hotelReservation.getCheapestHotel(startDate, endDate);
+        Assert.assertEquals("Lakewood", hotelName);
     }
 }
