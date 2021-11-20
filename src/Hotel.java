@@ -44,6 +44,9 @@ public class Hotel {
      void setWeekendRegularCustomerPrice(double weekendRegularCustomerCost) {
         this.weekendRegCost = weekendRegularCustomerCost;
     }
+    double getRegularCustomeerPrice(){
+        return weekdayRegCost+weekendRegCost;
+    }
     @Override
     public String toString() {
         return "Hotels [hotelName=" + hotelName + ", rating=" + rating + ", weekdayRegularCustomerPrice="
