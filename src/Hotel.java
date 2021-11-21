@@ -2,6 +2,8 @@ public class Hotel {
     String hotelName;
     double weekendRegCost;
     double weekdayRegCost;
+     double weekdayRewardCustomerCost;
+     double weekendRewardCustomerCost;
     int rating;
     public Hotel() {
 
@@ -12,6 +14,8 @@ public class Hotel {
         this.rating = rating;
         this.weekdayRegCost= weekdayRegCustomerCost;
         this.weekendRegCost = weekendRegCustomerCost;
+        this.weekdayRewardCustomerCost = weekdayRewardCustomerCost;
+        this.weekendRewardCustomerCost = weekendRewardCustomerCost;
     }
     public String getHotelName() {
         return hotelName;
@@ -44,9 +48,22 @@ public class Hotel {
      void setWeekendRegularCustomerPrice(double weekendRegularCustomerCost) {
         this.weekendRegCost = weekendRegularCustomerCost;
     }
-    double getRegularCustomeerPrice(){
-        return weekdayRegCost+weekendRegCost;
+    public double getWeekdayRewardCustomerCost() {
+        return weekdayRewardCustomerCost;
     }
+
+    public void setWeekdayRewardCustomerCost(double weekdayRewardCustomerCost) {
+        this.weekdayRewardCustomerCost = weekdayRewardCustomerCost;
+    }
+
+    public double getWeekendRewardCustomerCost() {
+        return weekendRewardCustomerCost;
+    }
+
+    public void setWeekendRewardCustomerCost(double weekendRewardCustomerCost) {
+        this.weekendRewardCustomerCost = weekendRewardCustomerCost;
+    }
+
     @Override
     public String toString() {
         return "Hotels [hotelName=" + hotelName + ", rating=" + rating + ", weekdayRegularCustomerPrice="
